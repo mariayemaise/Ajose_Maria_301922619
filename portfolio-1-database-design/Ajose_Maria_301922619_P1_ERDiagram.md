@@ -1,52 +1,48 @@
 # Student Result Portal Database Design ER Diagram
 
 erDiagram
-    direction LR
-    
-    %% Entity definitions with exact types and key markings
-    department {
-        bigint department_id PK
-        varchar_100 department_name UK
-    }
-    
-    student {
-        bigint student_id PK
-        varchar_100 student_name
-        bigint department_id FK
-        varchar_20 tuition_status
-    }
-    
-    course {
-        bigint course_id PK
-        varchar_20 course_code UK
-        varchar_150 course_name
-        bigint prerequisite_course_id FK
-    }
-    
-    lecturer {
-        bigint lecturer_id PK
-        varchar_100 lecturer_name
-        varchar_254 email UK
-    }
-    
-    enrollment {
-        bigint enrollment_id PK
-        bigint student_id FK
-        bigint course_id FK
-        bigint lecturer_id FK
-        numeric_4_2 numerical_grade
-        varchar_2 letter_grade
-        timestamptz submission_deadline
-    }
+	direction LR
+	department {
+		bigint department_id PK ""  
+		varchar_100 department_name UK ""  
+	}
 
-    %% Relationship definitions with exact cardinalities
-    %% and labels as specified
-    
-    department ||--o{ student : "contains"
-    course |o--o{ course : "requires_prerequisite"
-    student ||--o{ enrollment : "registers_in"
-    course ||--o{ enrollment : "receives"
-    lecturer ||--o{ enrollment : "teaches"
+	student {
+		bigint student_id PK ""  
+		varchar_100 student_name  ""  
+		bigint department_id FK ""  
+		varchar_20 tuition_status  ""  
+	}
+
+	course {
+		bigint course_id PK ""  
+		varchar_20 course_code UK ""  
+		varchar_150 course_name  ""  
+		bigint prerequisite_course_id FK ""  
+	}
+
+	lecturer {
+		bigint lecturer_id PK ""  
+		varchar_100 lecturer_name  ""  
+		varchar_254 email UK ""  
+	}
+
+	enrollment {
+		bigint enrollment_id PK ""  
+		bigint student_id FK ""  
+		bigint course_id FK ""  
+		bigint lecturer_id FK ""  
+		numeric_4_2 numerical_grade  ""  
+		varchar_2 letter_grade  ""  
+		timestamptz submission_deadline  ""  
+	}
+
+	department||--o{student:"contains"
+	course|o--o{course:"requires_prerequisite"
+	student||--o{enrollment:"registers_in"
+	course||--o{enrollment:"receives"
+	lecturer||--o{enrollment:"teaches"
+
 
 ## Understanding the Diagram
 
