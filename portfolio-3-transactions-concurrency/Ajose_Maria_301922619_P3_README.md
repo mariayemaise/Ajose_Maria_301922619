@@ -22,7 +22,8 @@ This exercise showed us how PostgreSQL transactions, CHECK constraints and uniqu
 - [Transactions SQL](Ajose_Maria_301922619_P3_Transactions.sql)
 - [Session A SQL](Ajose_Maria_301922619_P3_SessionA.sql)
 - [Session B SQL](Ajose_Maria_301922619_P3_SessionB.sql)
-- Screenshots: [Commit](Images/Ajose_Maria_301922619_P3_Commit.png), [Rollback](Images/ Ajose_Maria_301922619_P3_Rollback.png), and [ConcurrencyResult](Images/Ajose_Maria_301922619_P3_ConcurrencyResult.png)
+- Screenshots: [Commit](Images/Ajose_Maria_301922619_P3_Commit.png), [Rollback](Images/  
+  Ajose_Maria_301922619_P3_Rollback.png) ,and [ConcurrencyResult](Images/Ajose_Maria_301922619_P3_ConcurrencyResult.png)
 
 ## References
 - PostgreSQL 16 — [Transaction Isolation](https://www.postgresql.org/docs/16/transaction-iso.html)
