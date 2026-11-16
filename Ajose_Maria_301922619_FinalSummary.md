@@ -13,6 +13,7 @@ The Student Result Portal focuses on managing key academic activities, including
 
 ## Portfolio 1: Database Design and Modelling
 Portfolio 1 focused on designing the relational database for the Student Result Portal. I used normalisation to organise the data and reduce duplication across tables such as department, student, course, lecturer, and enrollment. I also implemented primary keys, foreign keys, unique constraints, and check constraints to maintain data integrity and prevent invalid records.
+<img width="1286" height="873" alt="Ajose_Maria_301922619_FinalSummaryER" src="https://github.com/user-attachments/assets/eed1d105-36ee-4032-b247-af70f38ac0d4" />
 
 ## Portfolio 2: Query Processing and Optimisation
 Portfolio 2 focused on improving query performance in PostgreSQL. I used EXPLAIN (ANALYZE, BUFFERS) to examine query execution plans and created a separate benchmark table with 100,000 synthetic enrollment records to avoid affecting the original data. After testing before and after creating a B-tree index on submission_deadline, the median execution time improved from 13.500 ms to 1.266 ms. This exercise helped me understand how indexing can make queries more efficient.
