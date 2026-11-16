@@ -1,10 +1,7 @@
+
 # Student Result Portal Database Design ER Diagram
 
-<img width="6446" height="3487" alt="Ajose_Maria_301922619_P1_ERDiagram md" src="https://github.com/user-attachments/assets/c62ff35a-a049-4d6b-b5f7-203f63d280fd" />
-
-
-## Entity Relationship Diagram
-
+```mermaid
 erDiagram
 
     department {
@@ -47,6 +44,8 @@ erDiagram
     student ||--o{ enrollment : registers_in
     course ||--o{ enrollment : receives
     lecturer ||--o{ enrollment : teaches
+```
+
 
 ## Understanding the Diagram
 
