@@ -3,6 +3,50 @@
 <img width="6446" height="3487" alt="Ajose_Maria_301922619_P1_ERDiagram md" src="https://github.com/user-attachments/assets/c62ff35a-a049-4d6b-b5f7-203f63d280fd" />
 
 
+## Entity Relationship Diagram
+
+erDiagram
+
+    department {
+        BIGINT department_id PK
+        VARCHAR(100) department_name UK
+    }
+
+    student {
+        BIGINT student_id PK
+        VARCHAR(100) student_name
+        BIGINT department_id FK
+        VARCHAR(20) tuition_status
+    }
+
+    course {
+        BIGINT course_id PK
+        VARCHAR(20) course_code UK
+        VARCHAR(150) course_name
+        BIGINT prerequisite_course_id FK
+    }
+
+    lecturer {
+        BIGINT lecturer_id PK
+        VARCHAR(100) lecturer_name
+        VARCHAR(254) email UK
+    }
+
+    enrollment {
+        BIGINT enrollment_id PK
+        BIGINT student_id FK
+        BIGINT course_id FK
+        BIGINT lecturer_id FK
+        NUMERIC(5,2) numerical_grade
+        VARCHAR(2) letter_grade
+        TIMESTAMPTZ submission_deadline
+    }
+
+    department ||--o{ student : contains
+    course |o--o{ course : requires_prerequisite
+    student ||--o{ enrollment : registers_in
+    course ||--o{ enrollment : receives
+    lecturer ||--o{ enrollment : teaches
 
 ## Understanding the Diagram
 
