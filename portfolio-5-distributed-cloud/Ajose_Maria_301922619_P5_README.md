@@ -20,8 +20,8 @@ If the primary node fails, the remaining secondaries automatically trigger an el
 Sharding distributes subsets of data across multiple instances, whereas replication copies identical datasets to ensure redundancy[cite: 4]. The current small dataset of four student activity records does not require sharding. Moving to a managed cloud deployment requires strict security controls—including authentication, encryption in transit and at rest, and restricted network access—alongside automated backup and restore policies, higher financial costs, and increased operational complexity[cite: 5]. Furthermore, MongoDB replication does not replicate PostgreSQL databases or synchronize data between the two distinct database engines automatically.
 
 ## References
-- MongoDB Manual — [Replication](https://www.mongodb.com/docs/manual/replication/)[cite: 1]
-- MongoDB Manual — [Replica Set Elections](https://www.mongodb.com/docs/v8.0/core/replica-set-elections/)[cite: 2]
-- MongoDB Reference — [Write Concern](https://www.mongodb.com/docs/v8.0/reference/write-concern/)[cite: 3]
-- MongoDB Manual — [Sharding](https://www.mongodb.com/docs/manual/sharding/)[cite: 4]
-- MongoDB Atlas — [Backup and Restore Cluster](https://www.mongodb.com/docs/atlas/backup-restore-cluster/)[cite: 5]
+- MongoDB Manual — [Replication](https://www.mongodb.com/docs/manual/replication/)
+- MongoDB Manual — [Replica Set Elections](https://www.mongodb.com/docs/v8.0/core/replica-set-elections/)
+- MongoDB Reference — [Write Concern](https://www.mongodb.com/docs/v8.0/reference/write-concern/)
+- MongoDB Manual — [Sharding](https://www.mongodb.com/docs/manual/sharding/)
+- MongoDB Atlas — [Backup and Restore Cluster](https://www.mongodb.com/docs/atlas/backup-restore-cluster/)
