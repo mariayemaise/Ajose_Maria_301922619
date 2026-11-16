@@ -20,7 +20,7 @@ Each record has an automatically generated ID.  unique means no duplicate values
 | department | department_id BIGINT; department_name VARCHAR(100) | PK: department_id. Unique: department_name. All required. |
 | course | course_id BIGINT; course_code VARCHAR(20); course_name VARCHAR(150); prerequisite_course_id BIGINT | PK: course_id. FK: prerequisite_course_id → course.course_id. Unique: course_code. All required except prerequisite_course_id. |
 | lecturer | lecturer_id BIGINT; lecturer_name VARCHAR(100); email VARCHAR(254) | PK: lecturer_id. Unique: email. All required. |
-| enrollment | enrollment_id BIGINT; student_id BIGINT; course_id BIGINT; lecturer_id BIGINT; numerical_grade NUMERIC(4,2); letter_grade VARCHAR(2); submission_deadline TIMESTAMPTZ | PK: enrollment_id. FKs: student_id → student.student_id, course_id → course.course_id, lecturer_id → lecturer.lecturer_id. All required except numerical_grade and letter_grade. |
+| enrollment | enrollment_id BIGINT; student_id BIGINT; course_id BIGINT; lecturer_id BIGINT; numerical_grade NUMERIC(5,2); letter_grade VARCHAR(2); submission_deadline TIMESTAMPTZ | PK: enrollment_id. FKs: student_id → student.student_id, course_id → course.course_id, lecturer_id → lecturer.lecturer_id. All required except numerical_grade and letter_grade. |
 
 ## Relationships
 
